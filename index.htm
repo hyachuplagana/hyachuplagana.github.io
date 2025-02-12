@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script defer src="main.js"></script> -->
+    <link rel="icon" href="heart.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .workspace{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            
+        }
+        .icon{
+            margin-top: 65px;
+            margin-left: 20px;
+        }
+        img{
+            height: 70px;
+            width: 70px;
+            /* background-color: rgba(0, 255, 255, 0.288); */
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 12px;
+            text-decoration: none;
+            color: #cdd6f4;
+            padding: 10px;
+        }
+        a:hover{
+            background-color: #a6adc82d;
+        }
+    </style>
+    <title>Nikesh Sherpa</title>
+</head>
+<body>
+    <!-- desktop -->
+    <div class="desktop">
+        <!-- topbar -->
+        <div class="topbar">
+            <div class="topbar-l">
+                <span class="currpage" id="currpage">Plasma Workspace</span>
+            </div>
+            <div class="topbar-m">
+                <span class="dandt" id="dateandtime"></span>
+            </div>
+            <div class="topbar-r">
+                <span class="info" id="info">nikesh</span>
+            </div>
+        </div>
+        <!-- workspace -->
+        <main class="workspace">
+            <div class="icon">
+                <a href="portfolio.htm">
+                    <img src="kitty.svg" alt="">
+                    <span class="icname">Kitty</span>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script type="text/JavaScript">
+        function showTime(){
+    const currTime = new Date()
+    const Year = String(currTime.getFullYear())
+    const Month = String(currTime.getMonth()+1).padStart(2,"0")
+    const Day = String(currTime.getDate()).padStart(2,"0")
+    const Hour = String(currTime.getHours()).padStart(2,"0")
+    const Min = String(currTime.getMinutes()).padStart(2,"0")
+
+    const date = `${Year}-${Month}-${Day} | ${Hour}:${Min}`
+
+    document.getElementById('dateandtime').textContent = date
+}
+
+setInterval(showTime,1000) //update date and time every sec
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+:root{
+    --font-family: "Noto Sans Mono", serif;
+    --normal-font: 16px;
+    --large-font: 20px;
+    --small-font: 14px; 
+    --smaller-font: 12px;
+
+    --bold : 800;
+    
+    /* colors from catpuccin mocha theme */
+    --text : #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    
+    --surface0: #313244;
+    --surface1: #45475a;
+
+    --crust-color: #11111b;
+    --mantle-color: #181825;
+    --base-color: #1e1e2e;
+
+    --rosewater: #f5e0dc;
+    --red: #f38ba8;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --pink: #f5c2e7;
+    --peach: #fab387;
+    --sky: #89dceb;
+    --teal: #94e2d5;
+}
+
+/* clearing */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* the base stuff */
+body{
+    /* background-color: var(--crust-color); */
+    font-family: var(--font-family);
+}
+
+.desktop{
+    display: flex;
+    justify-content: center;
+}
+
+/* topbar related css */
+.topbar{
+    background-color: var(--surface0);
+    color: var(--text);
+    height: 34px;
+    width: 99vw;
+    /* margin: 8px 10px 5px 10px; */
+    margin-top: 8px;
+    border-radius: 6px;
+    display: flex;
+    flex-grow: 1;
+    position: fixed;
+}
+
+
+.topbar-l, .topbar-m, .topbar-r{
+    /* pachi hataune */
+    /* border: 2px solid var(--red);   */
+    /*  */
+    width: 100%;
+    display: flex;  
+    align-items: center;
+    font-size: var(--small-font);
+}
+
+.topbar-m {
+    font-weight: var(--bold);
+    justify-content: center;
+}
+
+.dandt{
+    cursor: default;
+}
+
+.topbar-l{
+    font-weight: var(--bold);
+    justify-content: left;
+}
+
+.topbar-r{
+    justify-content: right;
+}
+
+.currpage::before{
+    content: "> ";
+}
+
+.currpage{
+    margin-left: 10px;
+    cursor: default;
+}
+
+.info {
+    font-size: var(--smaller-font);
+    margin-right: 10px;
+    cursor: default;
+}
+
+/* workspace and wallpaper */
+
+.workspace{
+    background-image: url(wallpaper-min.png);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* terminal */
+.terminal{
+    width: 800px;
+    height: 680px;
+    background-color: var(--base-color);
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px #888888;
+}
+.terminal:hover{
+    box-shadow: 0px 0px 8px #888888;
+}
+
+/* terminal ko head bar */
+
+.headbar{
+    background-color: var(--mantle-color);
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px 6px 0 0;
+}
+
+.headbar-l, .headbar-m, .headbar-r{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headbar-m{
+    justify-content: center;
+}
+
+.headbar-m span{
+    color: var(--text);
+    font-size: var(--smaller-font);
+    cursor: pointer;
+}
+
+.headbar-r{
+    justify-content: right;
+}
+
+.circ-container{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 6px;
+}
+
+.circle{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+
+.c1{
+    cursor: no-drop;
+    background-color: var(--green);
+}
+
+.c2{
+    cursor: no-drop;
+    background-color: var(--rosewater);
+}
+
+.c3{
+    background-color: var(--red);
+}
+.c3:hover{
+    background-color: #d65177;
+}
+/* terminal vitra ko stuff */
+
+/* neofetch style personal info haru */
+.terminal-container{
+    /* border: 1px solid pink; */
+    height: 572px;
+}
+
+.terminal-info{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    gap: 60px;
+}
+
+.asciiinfo{
+    /* border: 2px solid pink; */
+    font-weight: 900;
+    color: var(--rosewater);
+    font-size: 16px;
+    /* margin-left: 40px; */
+
+}
+
+.textinfo{
+    /* border: 2px solid yellow; */
+    font-size: var(--small-font);
+    color: var(--text);
+    line-height: 1.5em;
+}
+
+.textinfo hr{
+    margin: 10px 0;
+    color: var(--rosewater);
+}
+.txtinfo-main{
+    color: var(--green);
+    letter-spacing: 1px;
+}
+
+.qn{
+    color: var(--pink);
+    font-weight: 600;
+}
+
+.ans{
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.more{
+    /* border: 2px solid pink; */
+    height: 100%;
+}
+.terminal-line{
+    padding: 20px 33px 1px;
+    /* border: 2px solid white; */
+    color: var(--text);
+    font-size: var(--small-font);
+    font-weight: var(--bold);
+    /* letter-spacing: 0.5px; */
+}
+
+.termhead{
+    /* background-color: var(--green); */
+    color: var(--red);
+    cursor: default;
+}
+
+/* working on nav wala section of the terminal */
+.nav{
+    list-style: none;
+    display: flex;
+    margin-top: 4px;
+}
+.nav-items{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.nav-items::before{
+    content: '/'
+}
+
+.hidden{
+    display: none;
+}
+
+.selected{
+    color: var(--rosewater);
+    background-color: var(--red);
+    padding: 0px 4px;
+}
+.selected::before{
+    content: '> ';
+}
+.listedtext{
+    padding: 10px;
+}
+
+pre span{
+    color: var(--green);
+}
